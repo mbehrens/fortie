@@ -317,7 +317,7 @@ abstract class ProviderBase
       else {
         throw new FortnoxException(
           $jsonError->message,
-          null,
+          $jsonError->message,
           null,
           $e
       );
