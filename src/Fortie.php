@@ -86,7 +86,6 @@ class Fortie
   public function __construct(
     $endpoint,
     $access_token,
-    $client_secret,
     $content_type,
     $accepts,
     $config = []
@@ -95,8 +94,6 @@ class Fortie
     $this->client = new \GuzzleHttp\Client(array_merge([
       'base_uri'  => $endpoint,
       'headers'   => [
-        'Access-Token'  => $access_token,
-        'Client-Secret' => $client_secret,
         'Content-Type'  => $content_type,
         'Accept'        => $accepts,
         'Authorization' => "Bearer " . $access_token,

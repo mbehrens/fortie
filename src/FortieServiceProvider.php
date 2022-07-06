@@ -91,7 +91,6 @@ class FortieServiceProvider extends ServiceProvider
     $this->app->singleton(Fortie::class, function ($app) 
     {
       $access_token   = Config::get('fortie.default.access_token', Config::get('fortie::default.access_token'));
-      $client_secret  = Config::get('fortie.default.client_secret', Config::get('fortie::default.client_secret'));
       $content_type   = Config::get('fortie.default.content_type', Config::get('fortie::default.content_type'));
       $accepts        = Config::get('fortie.default.accepts', Config::get('fortie::default.accepts'));
       $endpoint       = Config::get('fortie.default.endpoint', Config::get('fortie::default.endpoint'));
@@ -99,7 +98,6 @@ class FortieServiceProvider extends ServiceProvider
       return new Fortie(
         $endpoint,
         $access_token,
-        $client_secret,
         $content_type,
         $accepts
       );
