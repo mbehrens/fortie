@@ -315,7 +315,12 @@ abstract class ProviderBase
         }
       }
       else {
-        throw new FortnoxException($responseBodyAsString);
+        throw new FortnoxException(
+          $jsonError->message,
+          null,
+          null,
+          $e
+      );
       }
     }
   }
