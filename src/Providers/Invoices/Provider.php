@@ -314,7 +314,7 @@ class Provider extends ProviderBase {
   public function email ($id)
   {
     $req = new FortieRequest();
-    $req->method('PUT');
+    $req->method('GET');
     $req->path($this->basePath)->path($id)->path('email');
 
     return $this->send($req->build());
